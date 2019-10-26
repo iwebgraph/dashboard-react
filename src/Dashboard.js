@@ -28,16 +28,36 @@ class Dashboard extends Component {
     };
   }
 
-  async componentDidMount() {
-    const url = "http://jaindigital.a2hosted.com/getData";
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({
-      highlights: data[0],
-      prePostFundHighlights: data[1],
-      raisedPendingFundHighlight: data[2]
-    });
-  }
+  componentDidMount = async () => {
+    const url1 = "http://jaindigital.a2hosted.com/highlights";
+    const url2 = "http://jaindigital.a2hosted.com/pre-post-funding-highlights";
+    const url3 =
+      "http://jaindigital.a2hosted.com/raised-pending-funding-highlights";
+
+    fetch(url1)
+      .then(response => response.json())
+      .then(responseData => {
+        this.setState({
+          highlights: responseData
+        });
+      });
+
+    fetch(url2)
+      .then(response => response.json())
+      .then(responseData => {
+        this.setState({
+          prePostFundHighlights: responseData
+        });
+      });
+
+    fetch(url3)
+      .then(response => response.json())
+      .then(responseData => {
+        this.setState({
+          raisedPendingFundHighlight: responseData
+        });
+      });
+  };
   render() {
     return (
       <div>
@@ -327,22 +347,14 @@ class Dashboard extends Component {
                           <li className="list-group-item">
                             Switch Currency
                             <label className="switch">
-                              <input
-                                type="checkbox"
-                                className="default"
-                                checked="true"
-                              />
+                              <input type="checkbox" className="default" />
                               <span className="slider round">usd</span>
                             </label>
                           </li>
                           <li className="list-group-item">
                             Day Mode/Night Mode
                             <label className="switch day-night">
-                              <input
-                                type="checkbox"
-                                className="default"
-                                checked="true"
-                              />
+                              <input type="checkbox" className="default" />
                               <span className="slider round"></span>
                             </label>
                           </li>
