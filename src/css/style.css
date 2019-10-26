@@ -1,0 +1,546 @@
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("../fonts/AvenirLTStd-Book.eot");
+  src: url("../fonts/AvenirLTStd-Book.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AvenirLTStd-Book.woff2") format("woff2"),
+    url("../fonts/AvenirLTStd-Book.woff") format("woff"),
+    url("../fonts/AvenirLTStd-Book.ttf") format("truetype"),
+    url("../fonts/AvenirLTStd-Book.svg#AvenirLTStd-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("../fonts/AvenirLTStd-Black.eot");
+  src: url("../fonts/AvenirLTStd-Black.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AvenirLTStd-Black.woff2") format("woff2"),
+    url("../fonts/AvenirLTStd-Black.woff") format("woff"),
+    url("../fonts/AvenirLTStd-Black.ttf") format("truetype"),
+    url("../fonts/AvenirLTStd-Black.svg#AvenirLTStd-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("../fonts/AvenirLTStd-Roman.eot");
+  src: url("../fonts/AvenirLTStd-Roman.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AvenirLTStd-Roman.woff2") format("woff2"),
+    url("../fonts/AvenirLTStd-Roman.woff") format("woff"),
+    url("../fonts/AvenirLTStd-Roman.ttf") format("truetype"),
+    url("../fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Bold.eot");
+  src: url("../fonts/CooperHewitt-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/CooperHewitt-Bold.woff2") format("woff2"),
+    url("../fonts/CooperHewitt-Bold.woff") format("woff"),
+    url("../fonts/CooperHewitt-Bold.ttf") format("truetype"),
+    url("../fonts/CooperHewitt-Bold.svg#CooperHewitt-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-family: "Avenir LT Std";
+  font-weight: normal;
+  font-style: normal;
+  color: #121212;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}
+
+.header-box {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+/*.header-box .logo{width:140px;}
+.header-box .logo a img{max-width:100%;}*/
+.logo {
+  width: 140px;
+}
+.logo a img {
+  max-width: 100%;
+}
+
+.nav-bar {
+  width: calc(100% - 140px);
+  text-align: right;
+}
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-bar ul li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+.nav-bar ul li a {
+  color: #121212 !important ;
+  font-size: 16px;
+  position: relative;
+}
+.nav-bar ul li.active a:after,
+.nav-bar ul li a:hover:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #121212;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.analysis-box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px 0px;
+}
+.analysis-box .heading-wrap {
+  width: 409px;
+}
+.analysis-box .heading-wrap h2 {
+  font-size: 39px;
+  font-weight: 900;
+  font-family: "Avenir LT Std";
+}
+.analysis-box .analysis-list {
+  list-style: none;
+  padding: 0 0 0 30px;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: calc(100% - 409px);
+}
+.analysis-box .analysis-list li {
+  display: inline-block;
+  text-align: left;
+  color: #414141;
+  font-size: 42px;
+  font-family: "Cooper Hewitt";
+  font-weight: bold;
+  position: relative;
+  padding-left: 10px;
+}
+.analysis-box .analysis-list li:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f4a24c;
+}
+.analysis-box .analysis-list li span {
+  font-size: 22px;
+  font-family: "Avenir LT Std";
+  font-weight: normal;
+}
+
+.card-panel {
+  width: 100%;
+  padding: 0px 0px;
+}
+.card-view {
+  margin-bottom: 0px;
+}
+.card-view .title-wrap {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #121212;
+  align-items: center;
+  align-content: center;
+}
+.card-view .title-wrap h2 {
+  display: inline-block;
+  font-size: 35px;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 900;
+}
+.card-view .title-wrap a {
+  color: #121212;
+  font-size: 20px;
+  font-weight: normal;
+}
+.card-view .chart-wrap {
+  width: 100%;
+  padding: 30px 0 0px;
+}
+.card-view .chart-wrap .total-count h3 {
+  font-family: "Cooper Hewitt";
+  font-weight: bold;
+  font-size: 30px;
+  margin: 20px 0px;
+}
+.card-view .chart-wrap .total-count h3 span {
+  font-family: "Avenir LT Std";
+  font-weight: normal;
+  font-size: 30px;
+  padding-left: 5px;
+}
+.progress-bar-wrap {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.progress-bar-wrap .common {
+  width: 17%;
+}
+.progress-bar-wrap .common .img-data,
+.progress-bar-wrap .raised .img-data {
+  background-color: #4d6d9a;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}
+.progress-bar-wrap .prefere {
+  width: 17%;
+}
+.progress-bar-wrap .prefere .img-data {
+  background-color: #99ced3;
+}
+.progress-bar-wrap .seriesA {
+  width: 17%;
+}
+.progress-bar-wrap .seriesA .img-data {
+  background-color: #86b3d1;
+}
+.progress-bar-wrap .seriesB {
+  width: 22%;
+}
+.progress-bar-wrap .seriesB .img-data {
+  background-color: #edb5bf;
+}
+.progress-bar-wrap .ps {
+  width: 10%;
+}
+.progress-bar-wrap .ps .img-data {
+  background-color: #987e6f;
+}
+.progress-bar-wrap .debt {
+  width: 17%;
+}
+.progress-bar-wrap .debt .img-data {
+  background-color: #535353;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+.progress-bar-wrap .img-data {
+  text-align: center;
+  padding: 8px;
+}
+.progress-bar-wrap .img-data p {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  font-size: 15px;
+}
+.progress-bar-wrap .data {
+  padding-top: 10px;
+}
+.progress-bar-wrap .data p {
+  text-align: center;
+  font-size: 15px;
+  color: #121212;
+  margin: 0;
+}
+.progress-bar-wrap .data h3 {
+  text-align: center;
+  font-size: 15px;
+  color: #121212;
+  margin: 0;
+  font-weight: bold;
+}
+
+.progress-bar-wrap .pending .img-data,
+.progress-bar-wrap .raised .img-data {
+  padding: 10px;
+}
+.progress-bar-wrap .raised {
+  width: 55%;
+}
+.progress-bar-wrap .pending {
+  width: 45%;
+}
+.progress-bar-wrap .pending .img-data {
+  background-color: #99ced3;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+.progress-bar-wrap .data h2 {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0px;
+}
+.chart-wrap img {
+  max-width: 100%;
+}
+/*new*/
+
+.chart-section {
+  width: 100%;
+  padding: 10px 0 0px;
+}
+
+.chart-section img {
+  max-width: 100%;
+}
+
+nav.navbar {
+  padding: 30px 20px 30px 0px;
+}
+
+.wrap-border {
+  border-bottom: 1px solid #121212;
+  margin: 30px 0;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 0px;
+}
+
+.circle-chart {
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.pre-post-money div {
+  margin-bottom: 15px;
+}
+.pre-post-money p {
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.pre-post-money h2 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/*switch css*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+  float: right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 10px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input.default:checked + .slider {
+  background-color: #444;
+}
+
+.day-night input.default:checked + .slider {
+  background-color: #070b34;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+li.list-group-item {
+  color: #414141;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 0px;
+  padding-right: 35px;
+  border: 0px;
+  padding-top: 20px;
+}
+
+li.list-group-item:first-child {
+  padding-top: 0px;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 7px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*switch css end*/
+
+/*@media(max-width: 1439px){
+
+.analysis-box .analysis-list li {
+  font-size: 32px;
+    }
+
+    .analysis-box .analysis-list li span {
+    display: block;
+}
+}*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-bar ul li {
+    padding: 0px 8px;
+  }
+
+  .analysis-box .analysis-list {
+    width: 100%;
+  }
+  .analysis-box .analysis-list li {
+    font-size: 32px;
+  }
+
+  .analysis-box .analysis-list li span {
+    display: block;
+  }
+  .pre-post-money h2 {
+    font-size: 26px;
+  }
+
+  .card-view .title-wrap {
+    display: block;
+  }
+  .card-view .title-wrap a {
+    display: block;
+  }
+
+  li.list-group-item {
+    font-size: 20px;
+    padding: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-panel {
+    padding: 40px 0px 0;
+  }
+  .analysis-box .heading-wrap h2 {
+    font-size: 30px;
+  }
+  .analysis-box {
+    padding: 25px 0px;
+  }
+  .analysis-box .analysis-list li {
+    font-size: 32px;
+  }
+
+  .card-view .title-wrap h2 {
+    font-size: 26px;
+  }
+  .card-view .title-wrap a {
+    font-size: 16px;
+  }
+
+  .card-view .chart-wrap .total-count h3 span {
+    font-size: 26px;
+  }
+  .card-view .title-wrap {
+    padding: 0 0 10px;
+  }
+  .progress-bar-wrap .img-data {
+    padding: 5px;
+  }
+  .progress-bar-wrap .img-data p {
+    font-size: 10px;
+  }
+  .progress-bar-wrap .data p {
+    font-size: 11px;
+  }
+
+  .progress-bar-wrap .data h3 {
+    font-size: 11px;
+  }
+  .progress-bar-wrap .data h2 {
+    font-size: 20px;
+  }
+
+  .pre-post-money p {
+    font-size: 20px;
+  }
+
+  .pre-post-money div {
+    margin-bottom: 0px;
+  }
+
+  li.list-group-item {
+    font-size: 18px;
+    padding-right: 5px;
+    padding-top: 10px;
+  }
+
+  .pre-post-money h2 {
+    font-size: 22px;
+  }
+  .analysis-box .analysis-list li {
+    padding-bottom: 20px;
+  }
+  .analysis-box .analysis-list li span {
+    display: block;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 5px;
+    text-align: center;
+  }
+}
